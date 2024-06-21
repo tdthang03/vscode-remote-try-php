@@ -89,22 +89,19 @@
             </div>
             <div id="duplicate-error" style="color: red;"></div>
             <div class="form-control">
+<<<<<<< HEAD
+                <input type="password" id="password" value="{{ old('password') }}" name="password" placeholder="Password" />
+=======
                 <input type="password" id="password" value="{{ old('password') }}" name="password" placeholder="Password" required />
                 @error('password')
                     <div>{{ $message }}</div>
                 @enderror
+>>>>>>> f6b8ce1ca37e5837fb923e470fe168ecb8baf9ee
                 <small id="password-error"></small>
                 <small id="password-error"></small><br>
                 <span></span>
             </div>
             <button type="submit" value="submit">Register</button>
-            <span>or use your account</span>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-
         </form>
 
         <!-- Biểu mẫu đăng nhập -->
@@ -136,12 +133,6 @@
                 </div>
             </div>
             <button type="submit" value="submit">Login</button>
-            <span>Or use your account</span>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="social"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
         </form>
 
 
@@ -152,7 +143,7 @@
                             <img
                                 src="{{asset('assets')}}/img/booking-confirm/logo-white.png"
                                 alt=""
-                                style=""
+                                
                             />
                         </h1>
 
@@ -168,7 +159,7 @@
                             <img
                                 src="{{asset('assets')}}/img/booking-confirm/logo-white.png"
                                 alt=""
-                                style=""
+                               
                             />
                         </h1>
                         <p>
