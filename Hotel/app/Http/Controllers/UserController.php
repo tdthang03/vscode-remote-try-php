@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 
 class UserController extends Controller
 {
+   
     public function loginSignUp() {
 
         return view('login_sign-up');
@@ -44,4 +45,9 @@ class UserController extends Controller
         }
         return redirect()->back()->with('error', 'Incorrect username or password');
     }
+    public function logout() { 
+        Auth::logout();
+        return redirect()->back();
+    }
+    
 }

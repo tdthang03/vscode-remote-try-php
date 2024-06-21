@@ -1,10 +1,16 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\Admin\DashBoardController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\FileController;
+use App\Models\Category;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +22,24 @@ use App\Http\Controllers\Admin\DashBoardController;
 |
 */
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/detail/{slug}', [HomeController::class, 'detail'])->name('detail');
 Route::get('/', [UserController::class, 'loginSignUp'])->name('login_sign-up');
 Route::post('/register', [UserController::class, 'register'])->name('register');
 Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
+Route::get('/logon',[AdminController::class,'logon'])->name('logon');
+Route::post('/logon',[AdminController::class,'postLogon'])->name('admin.logon');
+Route::get('/sign-out', [AdminController::class, 'signOut'])->name('admin.signout');
+Route::prefix('admin')->middleware('admin')->group(function () {
+    Route::get('/', [DashBoardController::class, 'index'])->name('admin.index');
+    Route::resource('category', CategoryController::class);
+    Route::get('/category-trash', [CategoryController::class, 'trash'])->name('category.trash');
+    Route::get('/category/{id}/restore', [CategoryController::class, 'restore'])->name('category.restore');
+    Route::get('/category/{id}/forceDelete', [CategoryController::class, 'forceDelete'])->name('category.forceDelete');
 
-
+    Route::resource('product', ProductController::class);
+});
 
 
 Route::get('about', function () {
@@ -40,9 +58,9 @@ Route::get('rooms', function () {
     return view('rooms');
 })->name('rooms');
 
-Route::get('room-single', function () {
-    return view('room-single');
-})->name('room-single');
+Route::get('detail', function () {
+    return view('detail');
+})->name('detail');
 
 Route::get('blog-single', function(){
     return view('blog-single');

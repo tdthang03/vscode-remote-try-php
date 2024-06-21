@@ -79,8 +79,20 @@
                             </nav>
                         </div>
                         <!-- navigation  end -->  		
-                        <div class="serach-header-btn_wrap">							
-                            <a href="{{ Route('login_sign-up') }}" class="serach-header-btn"><i class="fa-regular fa-user"></i> <span>logout</span></a>
+                        <div class="nav-holder main-menu">	
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a class="fas fa-caret-down"><i class="fa-regular fa-user"><span></i> {{Auth::user()->name}}</span><i class="fas fa-caret-down"></i></a>
+                                        <!--second level -->
+                                        <ul>
+                                            <li><a href="index.html"><i class="fa-regular fa-user"></i> User</a></li>
+                                            <li><a href="{{ Route('login_sign-up') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                                        </ul>
+                                        <!--second level end-->
+                                    </li>
+                                </ul>
+                            </nav>						
                         </div>
                         <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
@@ -103,24 +115,24 @@
                             <div class="wish-list-container">
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('room-single') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('room-single') }}">Garden Family Room</a></h4>
+                                        <h4><a href="{{ Route('detail') }}">Garden Family Room</a></h4>
                                         <div class="wish-list-price">$129/Night</div>
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Book Now</a>
+                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('room-single') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('room-single') }}">Premium Panorama Room</a></h4>
+                                        <h4><a href="{{ Route('detail') }}">Premium Panorama Room</a></h4>
                                         <div class="wish-list-price"> $230/Night</div>
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Book Now</a>
+                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>

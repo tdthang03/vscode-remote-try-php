@@ -78,8 +78,20 @@
                             </nav>
                         </div>
                         <!-- navigation  end -->  		
-                        <div class="serach-header-btn_wrap">							
-                            <a href="{{ Route('login_sign-up') }}" class="serach-header-btn"><i class="fa-regular fa-user"></i> <span>logout</span></a>
+                        <div class="nav-holder main-menu">	
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a class="fas fa-caret-down"><i class="fa-regular fa-user"><span></i> {{Auth::user()->name}}</span><i class="fas fa-caret-down"></i></a>
+                                        <!--second level -->
+                                        <ul>
+                                            <li><a href="index.html"><i class="fa-regular fa-user"></i> User</a></li>
+                                            <li><a href="{{ Route('login_sign-up') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                                        </ul>
+                                        <!--second level end-->
+                                    </li>
+                                </ul>
+                            </nav>						
                         </div>
                         <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
@@ -102,24 +114,24 @@
                             <div class="wish-list-container">
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('room-single') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('room-single') }}">Garden Family Room</a></h4>
+                                        <h4><a href="{{ Route('detail') }}">Garden Family Room</a></h4>
                                         <div class="wish-list-price">$129/Night</div>
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Book Now</a>
+                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('room-single') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('room-single') }}">Premium Panorama Room</a></h4>
+                                        <h4><a href="{{ Route('detail') }}">Premium Panorama Room</a></h4>
                                         <div class="wish-list-price"> $230/Night</div>
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Book Now</a>
+                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
@@ -224,7 +236,7 @@
                                             <div class="like-btn"><i class="fa-light fa-heart"></i> <span>Add to Wislist</span></div>
                                         </div>
                                         <div class="grid-item-details">
-                                            <h3><a href="{{ Route('room-single') }}">Garden Family Room</a>  </h3>
+                                            <h3><a href="{{ Route('detail') }}">Garden Family Room</a>  </h3>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.  </p>
                                             <div class="room-card-details">
                                                 <ul>
@@ -236,129 +248,15 @@
                                             <div class="grid-item_price">
                                                 <span>$129/Night</span>
                                             </div>
-                                            <a href="{{ Route('room-single') }}" class="gid_link"><span>View Details</span> <i class="fa-light fa-arrow-right-long"></i></a>
+                                            <a href="{{ Route('detail') }}" class="gid_link"><span>View Details</span> <i class="fa-light fa-arrow-right-long"></i></a>
                                         </div>
                                     </div>
                                     <!-- gallery-item end-->
                                     <!-- gallery-item-->
-                                    <div class="gallery-item seafood">
-                                        <div class="grid-item-holder hov_zoom">
-                                            <img  src="{{ asset('assets') }}/images/room/2.jpg"    alt="">
-                                            <a href="{{ asset('assets') }}/images/room/2.jpg" class="box-media-zoom   single-popup-image"><i class="fa-light fa-magnifying-glass"></i></a>
-                                            <div class="like-btn"><i class="fa-light fa-heart"></i> <span>Add to Wislist</span></div>
-                                        </div>
-                                        <div class="grid-item-details">
-                                            <h3><a href="{{ Route('room-single') }}">Premium Panorama Room</a></h3>
-                                            <p>Quisque varius eros ac purus dignissim. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
-                                            <div class="room-card-details">
-                                                <ul>
-                                                    <li><i class="fa-light fa-user"></i><span>4 Guest</span></li>
-                                                    <li><i class="fa-light fa-bed-front"></i><span>2 Bed</span></li>
-                                                    <li><i class="fa-light fa-bath"></i><span>2 Bath</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="grid-item_price">
-                                                <span>$230/Night</span>
-                                            </div>
-                                            <a href="{{ Route('room-single') }}" class="gid_link"><span>View Details</span> <i class="fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
+                                    
                                     <!-- gallery-item end-->
                                     <!-- gallery-item-->
-                                    <div class="gallery-item desserts">
-                                        <div class="grid-item-holder hov_zoom">
-                                            <img  src="{{ asset('assets') }}/images/room/3.jpg"    alt="">
-                                            <a href="{{ asset('assets') }}/images/room/3.jpg" class="box-media-zoom   single-popup-image"><i class="fa-light fa-magnifying-glass"></i></a>
-                                            <div class="like-btn"><i class="fa-light fa-heart"></i> <span>Add to Wislist</span></div>
-                                        </div>
-                                        <div class="grid-item-details">
-                                            <h3><a href="{{ Route('room-single') }}">Beach Villa Room</a>  </h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.  </p>
-                                            <div class="room-card-details">
-                                                <ul>
-                                                    <li><i class="fa-light fa-user"></i><span>2 Guest</span></li>
-                                                    <li><i class="fa-light fa-bed-front"></i><span>1 Bed</span></li>
-                                                    <li><i class="fa-light fa-bath"></i><span>1 Bath</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="grid-item_price">
-                                                <span>$321/Night</span>
-                                            </div>
-                                            <a href="{{ Route('room-single') }}" class="gid_link"><span>View Details</span> <i class="fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- gallery-item end-->
-                                    <!-- gallery-item-->
-                                    <div class="gallery-item seafood">
-                                        <div class="grid-item-holder hov_zoom">
-                                            <img  src="{{ asset('assets') }}/images/room/4.jpg"    alt="">
-                                            <a href="{{ asset('assets') }}/images/room/4.jpg" class="box-media-zoom   single-popup-image"><i class="fa-light fa-magnifying-glass"></i></a>
-                                            <div class="like-btn"><i class="fa-light fa-heart"></i> <span>Add to Wislist</span></div>
-                                        </div>
-                                        <div class="grid-item-details">
-                                            <h3><a href="{{ Route('room-single') }}">Comfort Room </a></h3>
-                                            <p>Quisque varius eros ac purus dignissim. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
-                                            <div class="room-card-details">
-                                                <ul>
-                                                    <li><i class="fa-light fa-user"></i><span>1 Guest</span></li>
-                                                    <li><i class="fa-light fa-bed-front"></i><span>1 Bed</span></li>
-                                                    <li><i class="fa-light fa-bath"></i><span>1 Bath</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="grid-item_price">
-                                                <span>$84/Night</span>
-                                            </div>
-                                            <a href="{{ Route('room-single') }}" class="gid_link"><span>View Details</span> <i class="fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- gallery-item end-->					
-                                    <!-- gallery-item-->
-                                    <div class="gallery-item desserts">
-                                        <div class="grid-item-holder hov_zoom">
-                                            <img  src="{{ asset('assets') }}/images/room/5.jpg"    alt="">
-                                            <a href="{{ asset('assets') }}/images/room/5.jpg" class="box-media-zoom   single-popup-image"><i class="fa-light fa-magnifying-glass"></i></a>
-                                            <div class="like-btn"><i class="fa-light fa-heart"></i> <span>Add to Wislist</span></div>
-                                        </div>
-                                        <div class="grid-item-details">
-                                            <h3><a href="{{ Route('room-single') }}"> Presidential Suite</a>  </h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare sem sed quam tempus aliquet vitae eget dolor. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum.  </p>
-                                            <div class="room-card-details">
-                                                <ul>
-                                                    <li><i class="fa-light fa-user"></i><span>2 Guest</span></li>
-                                                    <li><i class="fa-light fa-bed-front"></i><span>1 Bed</span></li>
-                                                    <li><i class="fa-light fa-bath"></i><span>1 Bath</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="grid-item_price">
-                                                <span>$543/Night</span>
-                                            </div>
-                                            <a href="{{ Route('room-single') }}" class="gid_link"><span>View Details</span> <i class="fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- gallery-item end-->
-                                    <!-- gallery-item-->
-                                    <div class="gallery-item seafood">
-                                        <div class="grid-item-holder hov_zoom">
-                                            <img  src="{{ asset('assets') }}/images/room/6.jpg"    alt="">
-                                            <a href="{{ asset('assets') }}/images/room/6.jpg" class="box-media-zoom   single-popup-image"><i class="fa-light fa-magnifying-glass"></i></a>
-                                            <div class="like-btn"><i class="fa-light fa-heart"></i> <span>Add to Wislist</span></div>
-                                        </div>
-                                        <div class="grid-item-details">
-                                            <h3><a href="{{ Route('room-single') }}">Superior  Panorama Room</a></h3>
-                                            <p>Quisque varius eros ac purus dignissim. Proin eu ultrices libero. Curabitur vulputate vestibulum elementum. Suspendisse id neque a nibh mollis blandit. Quisque varius eros ac purus dignissim.</p>
-                                            <div class="room-card-details">
-                                                <ul>
-                                                    <li><i class="fa-light fa-user"></i><span>3 Guest</span></li>
-                                                    <li><i class="fa-light fa-bed-front"></i><span>2 Bed</span></li>
-                                                    <li><i class="fa-light fa-bath"></i><span>1 Bath</span></li>
-                                                </ul>
-                                            </div>
-                                            <div class="grid-item_price">
-                                                <span>$1030/Night</span>
-                                            </div>
-                                            <a href="{{ Route('room-single') }}" class="gid_link"><span>View Details</span> <i class="fa-light fa-arrow-right-long"></i></a>
-                                        </div>
-                                    </div>
+                                    
                                     <!-- gallery-item end-->										
                                 </div>
                             </div>

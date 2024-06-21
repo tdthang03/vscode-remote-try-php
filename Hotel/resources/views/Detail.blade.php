@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     
-<!-- Mirrored from diamant.kwst.net/site/room-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Jun 2024 07:14:39 GMT -->
+<!-- Mirrored from diamant.kwst.net/site/detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Jun 2024 07:14:39 GMT -->
 <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
@@ -79,8 +79,20 @@
                             </nav>
                         </div>
                         <!-- navigation  end -->  		
-                        <div class="serach-header-btn_wrap">							
-                            <a href="{{ Route('login_sign-up') }}" class="serach-header-btn"><i class="fa-regular fa-user"></i> <span>logout</span></a>
+                        <div class="nav-holder main-menu">	
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a class="fas fa-caret-down"><i class="fa-regular fa-user"><span></i> {{Auth::user()->name}}</span><i class="fas fa-caret-down"></i></a>
+                                        <!--second level -->
+                                        <ul>
+                                            <li><a href="index.html"><i class="fa-regular fa-user"></i> User</a></li>
+                                            <li><a href="{{ Route('login_sign-up') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                                        </ul>
+                                        <!--second level end-->
+                                    </li>
+                                </ul>
+                            </nav>						
                         </div>
                         <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
@@ -103,24 +115,24 @@
                             <div class="wish-list-container">
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('room-single') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('room-single') }}">Garden Family Room</a></h4>
+                                        <h4><a href="{{ Route('detail') }}">Garden Family Room</a></h4>
                                         <div class="wish-list-price">$129/Night</div>
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Book Now</a>
+                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('room-single') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('room-single') }}">Premium Panorama Room</a></h4>
+                                        <h4><a href="{{ Route('detail') }}">Premium Panorama Room</a></h4>
                                         <div class="wish-list-price"> $230/Night</div>
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Book Now</a>
+                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
@@ -293,7 +305,7 @@
                                                     <div class="overlay"></div>
                                                     <div class="video-box-btn image-popup color-bg" id="html5-videos" data-html="#video1"><i class="fas fa-play"></i></div>
                                                 </div>
-                                                <div style="display:none;" id="video1" class="popup_video" data-videolink="video/1.mp4">
+                                                <div style="display:none;" id="video1" class="popup_video" data-videolink="{{ asset('assets') }}/video/1.mp4">
                                                     <video class="lg-video-object lg-html5" controls preload="none">
                                                         <source src="https://diamant.kwst.net/" type="video/mp4">
                                                     </video>
@@ -349,12 +361,12 @@
                             <div class=" row">
                                 <!-- 1  --> 
                                 <div class="item-related col-lg-4">
-                                    <a href="{{ Route('room-single') }}" class="item-related_img">
+                                    <a href="{{ Route('detail') }}" class="item-related_img">
                                         <img src="{{ asset('assets') }}/images/room/3.jpg" class="respimg"   alt="">
                                         <div class="overlay"></div>
                                         <span>View Details</span>
                                     </a>
-                                    <h3><a href="{{ Route('room-single') }}">Premium Panorama Room</a></h3>
+                                    <h3><a href="{{ Route('detail') }}">Premium Panorama Room</a></h3>
                                     <span class="post-date post-price">$230/Night</span>
                                     <div class="room-card-details">
                                         <ul>
@@ -367,12 +379,12 @@
                                 <!-- 1 end--> 
                                 <!-- 2  --> 
                                 <div class="item-related col-lg-4">
-                                    <a href="{{ Route('room-single') }}" class="item-related_img">
+                                    <a href="{{ Route('detail') }}" class="item-related_img">
                                         <img src="{{ asset('assets') }}/images/room/4.jpg" class="respimg"   alt="">
                                         <div class="overlay"></div>
                                         <span>View Details</span>
                                     </a>
-                                    <h3><a href="{{ Route('room-single') }}">Beach Villa Room</a></h3>
+                                    <h3><a href="{{ Route('detail') }}">Beach Villa Room</a></h3>
                                     <span class="post-date post-price">$321/Night</span>
                                     <div class="room-card-details">
                                         <ul>
@@ -385,12 +397,12 @@
                                 <!-- 2 end-->  
                                 <!-- 3  --> 
                                 <div class="item-related col-lg-4">
-                                    <a href="{{ Route('room-single') }}" class="item-related_img">
+                                    <a href="{{ Route('detail') }}" class="item-related_img">
                                         <img src="{{ asset('assets') }}/images/room/5.jpg" class="respimg"   alt="">
                                         <div class="overlay"></div>
                                         <span>View Details</span>
                                     </a>
-                                    <h3><a href="{{ Route('room-single') }}">Superior Panorama Room</a></h3>
+                                    <h3><a href="{{ Route('detail') }}">Superior Panorama Room</a></h3>
                                     <span class="post-date post-price">$143/Night</span>
                                     <div class="room-card-details">
                                         <ul>
@@ -517,5 +529,5 @@
         <script  src="{{ asset('assets') }}/js/scripts.js"></script>
     </body>
 
-<!-- Mirrored from diamant.kwst.net/site/room-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Jun 2024 07:14:39 GMT -->
+<!-- Mirrored from diamant.kwst.net/site/detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Jun 2024 07:14:39 GMT -->
 </html>

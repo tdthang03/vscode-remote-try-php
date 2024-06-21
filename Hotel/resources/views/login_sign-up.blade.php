@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -71,24 +72,27 @@
             @csrf
             <h1>Register here</h1>
             <div class="form-control">
-                <input type="text" id="name" value="{{ old('name') }}" name="name" placeholder="Name" />
+                <input type="text" id="name" value="{{ old('name') }}" name="name" placeholder="Name" required />
+                @error('name')
+                    <div>{{ $message }}</div>
+                @enderror
                 <small id="username-error"></small>
                 <span></span>
             </div>
             <div class="form-control">
-                <input type="email" id="email" value="{{ old('email') }}" name="email" placeholder="Email" />
+                <input type="email" id="email" value="{{ old('email') }}" name="email" placeholder="Email" required />
+                @error('email')
+                    <div>{{ $message }}</div>
+                @enderror
                 <small id="email-error"></small>
                 <span></span>
             </div>
             <div id="duplicate-error" style="color: red;"></div>
             <div class="form-control">
-                <input type="password" id="password" value="{{ old('password') }}" name="password" placeholder="Password" />
-                <small id="password-error"></small>
-                <small id="password-error"></small><br>
-                <span></span>
-            </div>
-            <div class="form-control">
-                <input type="password" id="password" value="{{ old('password') }}" placeholder="Confirm Password" />
+                <input type="password" id="password" value="{{ old('password') }}" name="password" placeholder="Password" required />
+                @error('password')
+                    <div>{{ $message }}</div>
+                @enderror
                 <small id="password-error"></small>
                 <small id="password-error"></small><br>
                 <span></span>
