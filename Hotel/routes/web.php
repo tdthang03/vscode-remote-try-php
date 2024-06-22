@@ -11,8 +11,6 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\CartController;
 use App\Models\Category;
-use App\Http\Controllers\BookingController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -68,8 +66,3 @@ Route::get('blog-single', function(){
 Route::get('contact', function(){
     return view('contact');
 })->name('contact');
-
-
-
-Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
-

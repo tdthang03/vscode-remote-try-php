@@ -104,7 +104,7 @@
                             @endif
                             					
                         </div>
-                        
+                        <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
                        
                         <!-- nav-button-wrap-->
@@ -330,7 +330,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                   
+                                                    <div class="like-btn"><i class="fa-light fa-heart"></i> <span>Add to Wislist</span></div>
                                                 </div>
                                             </div>
                                             @endforeach

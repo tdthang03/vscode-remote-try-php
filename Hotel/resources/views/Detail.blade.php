@@ -94,7 +94,7 @@
                                 </ul>
                             </nav>						
                         </div>
-                       
+                        <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
                         <!-- nav-button-wrap-->
                         <div class="nav-button-wrap">
@@ -138,7 +138,9 @@
                                 </div>
                                 <!--wish-list-item end-->
                             </div>
-                            <
+                            <div class="wish-list-wrap-btns">
+                                <a href="#" class="wl_btn">Clear wishlist</a>
+                            </div>
                         </div>
                         <!--wish-list-wrap-->
                     </div>
@@ -299,35 +301,31 @@
                                     <div class="fw-search-wrap">
                                         <div class="fw-search-wrap-title">Book  This Suite</div>
                                         <div class="section-separator"><span><i class="fa-thin fa-gem"></i></span></div>
-                                        @if (session('success'))
-                                        <div class="alert alert-success">
-                                            {{ session('success') }}
-                                        </div>
-                                    @endif
-                                    
-                                    <form class="custom-form" action="{{ route('bookings.store') }}" method="post">
-                                        @csrf
-                                        <fieldset>
-                                            <div class="input-wrap">
-                                                <label>Your Name</label>
-                                                <input type="text" name="name" placeholder="Your Name *" value="">
-                                            </div>
-                                            <div class="input-wrap">
-                                                <label>Phone</label>
-                                                <input type="text" name="phone" placeholder="Your Phone" value="">
-                                            </div>
-                                            <div class="date-container input-wrap">
-                                                <label>Date</label>
-                                                <input type="text" id="res_date" name="res_date" placeholder="Date" value="">
-                                            </div>
-                                            <div class="quantity input-wrap">
-                                                <label>Guests</label>
-                                                <input type="number" name="quantity" placeholder="Guests" value="">
-                                            </div>
-                                            <button type="submit">Book Now</button>
-                                        </fieldset>
-                                    </form>
-                                    
+                                        <form  class="custom-form" action="https://diamant.kwst.net/" name="bookform">
+                                            <fieldset>
+                                                <div class="input-wrap">
+                                                    <label>Your Name:</label>
+                                                    <input type="text" placeholder="Your Name *" value="">
+                                                </div>
+                                                <div class="input-wrap">
+                                                    <label>Phone:</label>
+                                                    <input type="text" placeholder="Your Phone" value="">
+                                                </div>
+                                                <div class="date-container input-wrap">
+                                                    <label>Date:</label>
+                                                    <input type="text" id="res_date"     name="resdate"   value="">
+                                                </div>
+                                                <div class="quantity input-wrap ">
+                                                    <div class="quantity_title">Guests: </div>
+                                                    <div class="quantity-item">
+                                                        <input type="button" value="-" class="minus">
+                                                        <input type="text"    name="quantity"   title="Qty" class="qty color-bg" data-min="1" data-max="10" data-step="1" value="1">
+                                                        <input type="button" value="+" class="plus">
+                                                    </div>
+                                                </div>
+                                                <button class="searchform-submit bs_btn">Book Your Stay</button>
+                                            </fieldset>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
