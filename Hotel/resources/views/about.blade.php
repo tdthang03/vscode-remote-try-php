@@ -31,7 +31,7 @@
                 <div class="container">
                     <!--  header-top -->
                     <div class="header-top  fl-wrap">
-                        <div class="header-top_contacts"><a href="#"><span>Số điện thoại:</span> +88889999</a><a href="#"><span>Địa chỉ:</span> Đại học Phenikaa</a></div>
+                        <div class="header-top_contacts"><a href="#"><span>Call:</span> +489756412322</a><a href="#"><span>Find us:</span> USA 27TH Brooklyn NY</a></div>
                         <div class="header-social">
                             <ul>
                                 <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -50,7 +50,7 @@
                                 <p>Our ratings on Booking.com</p>
                             </a>
                         </div>
-                        
+                        <div class="lang-wrap"><a href="#" class="act-lang">En</a><span>/</span><a href="#">Fr</a></div>
                     </div>
                     <!--  header-top end  -->
                     <div class="nav-holder-wrap init-fix-header  fl-wrap">
@@ -60,18 +60,21 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <a href="{{ Route('home') }}" class="act-link">Trang Chủ</a>
+                                        <a href="{{ Route('home') }}">Home</a>
                                         <!--second level -->
+                                       
                                         <!--second level end-->
                                     </li>
-                                    <li><a href="{{ Route('about') }}">About</a></li>
+                                    <li><a href="{{ Route('about') }}" class="act-link">About</a></li>
                                     <li>
-                                        <a href="{{ Route('rooms') }}">Phòng</a>
-                                       
+                                        <a href="{{ Route('rooms') }}">Rooms</a>
+                                        <!--second level -->
+                                        
+                                        <!--second level end-->
                                     </li>
                                     <li><a href="{{ Route('restaurant') }}">Restaurant</a></li>
-                                    <li><a href="contact">Liên hệ</a></li>
-                                    <li><a href="blog">Mới</a></li>
+                                    <li><a href="{{ Route('contact') }}">Contact</a></li>
+                                    <li><a href="{{ Route('blog') }}">News</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -91,7 +94,7 @@
                                 </ul>
                             </nav>						
                         </div>
-                        <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Danh Sách</span></div>
+                        <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
                         <!-- nav-button-wrap-->
                         <div class="nav-button-wrap">
@@ -108,43 +111,35 @@
                         <!--wish-list-wrap-->
                         <div class="wish-list-wrap novis_cart">
                             <div class="wish-list-close close_cart-init clwl_btn"><i class="fa-regular fa-xmark"></i></div>
-                            <div class="wish-list-title">Danh Sách </div>
+                            <div class="wish-list-title">Your Wishlist </div>
                             <div class="wish-list-container">
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href=""><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('detail') }}">Garden Family Room</a></h4>
+                                        <h4><a href="">Garden Family Room</a></h4>
                                         <div class="wish-list-price">$129/Night</div>
-<<<<<<< HEAD
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Đặt Phòng</a>
-=======
-                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
->>>>>>> f6b8ce1ca37e5837fb923e470fe168ecb8baf9ee
+                                        <a  href="" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href=""><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('detail') }}">Premium Panorama Room</a></h4>
+                                        <h4><a href="">Premium Panorama Room</a></h4>
                                         <div class="wish-list-price"> $230/Night</div>
-<<<<<<< HEAD
-                                        <a  href="{{ Route('room-single') }}" class="wshil_link">Đặt Phòng</a>
-=======
-                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
->>>>>>> f6b8ce1ca37e5837fb923e470fe168ecb8baf9ee
+                                        <a  href="" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                             </div>
                             <div class="wish-list-wrap-btns">
-                                <a href="#" class="wl_btn">Xóa Danh Sách</a>
+                                <a href="#" class="wl_btn">Clear wishlist</a>
                             </div>
                         </div>
                         <!--wish-list-wrap-->
@@ -159,8 +154,8 @@
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="section-title">
-                        <h4>Hãy tận hưởng thời gian của bạn tại khách sạn..</h4>
-                        <h2>Thông tin Khách sạn</h2>
+                        <h4>Enjoy your time in our Hotel with pleasure.</h4>
+                        <h2>About The Hotel</h2>
                         <div class="section-separator"><span><i class="fa-thin fa-gem"></i></span></div>
                     </div>
                 </div>
@@ -191,13 +186,14 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="section-title text-align_left" style="margin-top: 50px;">
-                                    <h4>Hãy tận hưởng thời gian của bạn tại khách sạn</h4>
-                                    <h2>Thông tin khách sạn</h2>
+                                    <h4>Enjoy your time in our Hotel</h4>
+                                    <h2>About Our Hotel</h2>
                                 </div>
                                 <div class="text-block tb-sin">
-                                    <p class="has-drop-cap">Để bạn có thể thấy tất cả những sai lầm sinh ra từ đâu, tôi sẽ mở ra toàn bộ niềm vui của những người buộc tội và nỗi đau của những người khen ngợi. Và chính những điều đã được nói bởi người khám phá ra sự thật và có thể nói là người kiến ​​tạo nên một cuộc sống hạnh phúc. Vì để đi đến từng chi tiết nhỏ nhất, bất kỳ ai trong chúng ta cũng thực hiện bất kỳ bài tập thể chất nào tốn nhiều công sức, trừ khi anh ta thu được lợi ích nào đó từ việc đó. 
+                                    <p class="has-drop-cap">Qed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.Ut enim ad minima Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur. 
                                     </p>
-                                    <a href="{{ Route('contact') }}" class="btn fl-btn ">Gọi để đặt chỗ</a>
+                                    <p>Fames massa tortor sit nisl sit. Duis nulla tempus quisque et diam condimentum nisl. Rhoncus quisque elementum nulla lorem at turpis vitae quisque. Vulputate duis vel et odio hendrerit magna. Nec lacus dui egestas sit. Vulputate tincidunt viverra viverra etiam porta facilisis.    Fames massa tortor sit nisl sit. Duis nulla tempus quisque et diam condimentum nisl. Rhoncus quisque elementum nulla lorem at turpis vitae quisque. Vulputate duis vel et odio hendrerit magna. Nec lacus dui egestas sit. Vulputate tincidunt viverra viverra etiam porta facilisis.   </p>
+                                    <a href="{{ Route('contact') }}" class="btn fl-btn ">Call For Reservation</a>
                                     <div class="dc_dec-item_left"><span></span></div>
                                 </div>
                             </div>
@@ -225,7 +221,7 @@
                         </div>
                         <div class="sc-dec" style="left: -220px; bottom: -100px;"></div>
                     </div>
-                   
+                    <div class="content-dec2 fs-wrapper"></div>
                     <div class="content-dec"><span></span></div>
                 </div>
                 <!-- section end  -->
@@ -281,13 +277,110 @@
                     <div class="dec-corner dc_rb"></div>
                     <div class="dec-corner dc_rt"></div>
                     <div class="dec-corner dc_lt"></div>
-                </div>	
+                </div>
+                <!-- section end  -->	
+                <!-- section   -->
+                <div class="content-section">
+                    <div class="container">
+                        <div class="section-title">
+                            <h4>Enjoy your time in our Hotel with pleasure.</h4>
+                            <h2>Meet Our Team</h2>
+                            <div class="section-separator"><span><i class="fa-thin fa-gem"></i></span></div>
+                        </div>
+                        <div class="team-container">
+                            <div class="dec-container">
+                                <div class="text-block">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <!-- team-item -->
+                                            <div class="team-box">
+                                                <div class="team-photo">
+                                                    <img src="{{ asset('assets') }}/images/team/1.jpg" alt="" class="respimg">
+                                                    <div class="overlay"></div>
+                                                    <div class="team-social">
+                                                        <span class="ts_title">Follow</span>
+                                                        <ul>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="team-info fl-wrap">
+                                                    <h3> Kevin  Gray </h3>
+                                                    <h4>General Hotel Manager</h4>
+                                                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- team-item  end-->
+                                        <!-- team-item -->
+                                        <div class="col-lg-4">
+                                            <div class="team-box">
+                                                <div class="team-photo">
+                                                    <img src="{{ asset('assets') }}/images/team/2.jpg" alt="" class="respimg">
+                                                    <div class="overlay"></div>
+                                                    <div class="team-social">
+                                                        <span class="ts_title">Follow</span>
+                                                        <ul>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="team-info fl-wrap">
+                                                    <h3> Austin Evon </h3>
+                                                    <h4>Guest Service Department</h4>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod   labore et dolore magna aliqua.  </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- team-item end  -->
+                                        <!-- team-item -->
+                                        <div class="col-lg-4">
+                                            <div class="team-box">
+                                                <div class="team-photo">
+                                                    <img src="{{ asset('assets') }}/images/team/3.jpg" alt="" class="respimg">
+                                                    <div class="overlay"></div>
+                                                    <div class="team-social">
+                                                        <span class="ts_title">Follow</span>
+                                                        <ul>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="team-info fl-wrap">
+                                                    <h3> Taylor Roberts </h3>
+                                                    <h4>Reservations Hotel Manager</h4>
+                                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit   ut aliquid commodi consequatur. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- team-item end  -->					
+                                    </div>
+                                </div>
+                                <div class="dc_dec-item_left"><span></span></div>
+                                <div class="dc_dec-item_right"><span></span></div>
+                            </div>
+                        </div>
+                        <div class="sc-dec" style="left: -220px; bottom: -100px;"></div>
+                        <div class="sc-dec2" style="right: -220px; top: -100px;"></div>
+                    </div>
+                    <div class="content-dec2 fs-wrapper"></div>
+                </div>
+                <!-- section end  -->	
                 <!-- section   -->
                 <div class="content-section dark-bg parallax-section no-padding">
                     <div class="row">
                         <div class="st-gallery">
                             <div class="section-title">
-                                <h4>Hãy tận hưởng thời gian của bạn tại khách sạn..</h4>
+                                <h4>Enjoy your time in our Hotel with pleasure.</h4>
                                 <h2>Our Gallery</h2>
                                 <div class="section-separator"><span><i class="fa-thin fa-gem"></i></span></div>
                             </div>
@@ -353,7 +446,8 @@
                 <div class="content-section">
                     <div class="container  ">
                         <div class="section-title">
-                            <h2>Nhóm chúng tôi</h2>
+                            <h4>What said about us</h4>
+                            <h2>Testimonials and Clients</h2>
                             <div class="section-separator"><span><i class="fa-thin fa-gem"></i></span></div>
                         </div>
                         <div class="sc-dec3" style="left: 40%; bottom: -200px;"></div>
@@ -367,12 +461,12 @@
                                     <!--testi-item-->
                                     <div class="swiper-slide">
                                         <div class="testi-item">
-                                            <div class="testi-avatar"><img src="{{ asset('assets') }}/images/avatar/thang.jpg" alt=""></div>
+                                            <div class="testi-avatar"><img src="{{ asset('assets') }}/images/avatar/2.jpg" alt=""></div>
                                             <div class="testimonilas-text">
                                                 <div class="testimonilas-text-item">
-                                                    <h3>Trương Đức Thắng</h3>
+                                                    <h3>Andy Dimasky</h3>
                                                     <div class="star-rating" data-starrating="5"> </div>
-                                                    <p>"Hãy đặt phòng và tận hưởng trọn vẹn những dịch vụ cao cấp nhất"</p>
+                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
                                                     <a href="#" class="testi-link" target="_blank">Via Booking.com</a>
                                                 </div>
                                                 <span class="testi-number">01.</span>
@@ -384,12 +478,12 @@
                                     <!--testi-item-->
                                     <div class="swiper-slide">
                                         <div class="testi-item">
-                                            <div class="testi-avatar"><img src="{{ asset('assets') }}/images/avatar/doanh.jpg" alt=""></div>
+                                            <div class="testi-avatar"><img src="{{ asset('assets') }}/images/avatar/3.jpg" alt=""></div>
                                             <div class="testimonilas-text">
                                                 <div class="testimonilas-text-item">
-                                                    <h3>Nguyễn Văn Doanh</h3>
+                                                    <h3>Jannet Dellov</h3>
                                                     <div class="star-rating" data-starrating="4"> </div>
-                                                    <p>"Hãy đặt phòng và tận hưởng trọn vẹn những dịch vụ cao cấp nhất"</p>
+                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
                                                     <a href="#" class="testi-link" target="_blank">Via hotels.com</a>													
                                                 </div>
                                                 <span class="testi-number">02.</span>
@@ -401,12 +495,12 @@
                                     <!--testi-item-->
                                     <div class="swiper-slide">
                                         <div class="testi-item">
-                                            <div class="testi-avatar"><img src="{{ asset('assets') }}/images/avatar/an.jpg" alt=""></div>
+                                            <div class="testi-avatar"><img src="{{ asset('assets') }}/images/avatar/4.jpg" alt=""></div>
                                             <div class="testimonilas-text">
                                                 <div class="testimonilas-text-item">
-                                                    <h3>Lê Phú An</h3>
+                                                    <h3>Centa Simpson</h3>
                                                     <div class="star-rating" data-starrating="5"> </div>
-                                                    <p>"Hãy đặt phòng và tận hưởng trọn vẹn những dịch vụ cao cấp nhất"</p>
+                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
                                                     <a href="#" class="testi-link" target="_blank">Via Booking.com</a>													
                                                 </div>
                                                 <span class="testi-number">03.</span>
@@ -416,13 +510,28 @@
                                     </div>
                                     <!--testi-item end-->
                                     <!--testi-item-->
+                                    <div class="swiper-slide">
+                                        <div class="testi-item">
+                                            <div class="testi-avatar"><img src="{{ asset('assets') }}/images/avatar/5.jpg" alt=""></div>
+                                            <div class="testimonilas-text">
+                                                <div class="testimonilas-text-item">
+                                                    <h3>Nicolo Svensky</h3>
+                                                    <div class="star-rating" data-starrating="5"> </div>
+                                                    <p>"Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. "</p>
+                                                    <a href="#" class="testi-link" target="_blank">Via hotels.com</a>													
+                                                </div>
+                                                <span class="testi-number">04.</span>
+                                                <div class="testi-item-dec fs-wrapper"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <!--testi-item end-->
                                 </div>
                             </div>
                         </div>
                         <div class="tcs-pagination tcs-pagination_init"></div>
                     </div>
-                    
+                    <div class="content-dec2 fs-wrapper"></div>
                 </div>
                 <!-- section end  -->				
                 <div class="content-dec"><span></span></div>

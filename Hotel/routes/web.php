@@ -9,7 +9,10 @@ use App\Http\Controllers\Admin\DashBoardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\CartController;
 use App\Models\Category;
+use App\Http\Controllers\BookingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +25,7 @@ use App\Models\Category;
 |
 */
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/rooms', [HomeController::class, 'rooms'])->name('rooms');
 Route::get('/detail/{slug}', [HomeController::class, 'detail'])->name('detail');
 Route::get('/', [UserController::class, 'loginSignUp'])->name('login_sign-up');
 Route::post('/register', [UserController::class, 'register'])->name('register');
@@ -31,6 +35,9 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/logon',[AdminController::class,'logon'])->name('logon');
 Route::post('/logon',[AdminController::class,'postLogon'])->name('admin.logon');
 Route::get('/sign-out', [AdminController::class, 'signOut'])->name('admin.signout');
+
+Route::post('/add-cart', [CartController::class, 'add'])->name('cart.add');
+
 Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/', [DashBoardController::class, 'index'])->name('admin.index');
     Route::resource('category', CategoryController::class);
@@ -54,14 +61,6 @@ Route::get('restaurant', function () {
     return view('restaurant');
 })->name('restaurant');
 
-Route::get('rooms', function () {
-    return view('rooms');
-})->name('rooms');
-
-Route::get('detail', function () {
-    return view('detail');
-})->name('detail');
-
 Route::get('blog-single', function(){
     return view('blog-single');
 })->name('blog-single');
@@ -70,12 +69,7 @@ Route::get('contact', function(){
     return view('contact');
 })->name('contact');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+
+
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+

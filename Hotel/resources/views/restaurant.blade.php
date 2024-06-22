@@ -94,7 +94,7 @@
                                 </ul>
                             </nav>						
                         </div>
-                        <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
+                        
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
                         <!-- nav-button-wrap-->
                         <div class="nav-button-wrap">
@@ -115,24 +115,24 @@
                             <div class="wish-list-container">
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href=""><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('detail') }}">Garden Family Room</a></h4>
+                                        <h4><a href="">Garden Family Room</a></h4>
                                         <div class="wish-list-price">$129/Night</div>
-                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
+                                        <a  href="" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href=""><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('detail') }}">Premium Panorama Room</a></h4>
+                                        <h4><a href="">Premium Panorama Room</a></h4>
                                         <div class="wish-list-price"> $230/Night</div>
-                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
+                                        <a  href="" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>

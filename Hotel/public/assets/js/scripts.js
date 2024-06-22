@@ -689,3 +689,4 @@ document.addEventListener('gesturestart', function (e) {
 $(document).ready(function () {
     initDiamant();
 });
+

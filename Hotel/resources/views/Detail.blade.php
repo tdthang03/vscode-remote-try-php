@@ -94,7 +94,7 @@
                                 </ul>
                             </nav>						
                         </div>
-                        <div class="show-cart sc_btn   htact"><i class="fa-light fa-basket-shopping-simple"></i><span class="show-cart_count">2</span><span class="header-tooltip">Your Wishlist</span></div>
+                       
                         <div class="show-share-btn showshare htact"><i class="fa-light fa-share-nodes"></i><span class="header-tooltip">Share</span></div>
                         <!-- nav-button-wrap-->
                         <div class="nav-button-wrap">
@@ -115,32 +115,30 @@
                             <div class="wish-list-container">
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href=""><img src="{{ asset('assets') }}/images/room/thumbnail/1.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('detail') }}">Garden Family Room</a></h4>
+                                        <h4><a href="">Garden Family Room</a></h4>
                                         <div class="wish-list-price">$129/Night</div>
-                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
+                                        <a  href="" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                                 <!--wish-list-item-->
                                 <div class="wish-list-item fl-wrap">
-                                    <div class="wish-list-img"><a href="{{ Route('detail') }}"><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
+                                    <div class="wish-list-img"><a href=""><img src="{{ asset('assets') }}/images/room/thumbnail/2.jpg" alt=""></a>  
                                     </div>
                                     <div class="wish-list-descr">
-                                        <h4><a href="{{ Route('detail') }}">Premium Panorama Room</a></h4>
+                                        <h4><a href="">Premium Panorama Room</a></h4>
                                         <div class="wish-list-price"> $230/Night</div>
-                                        <a  href="{{ Route('detail') }}" class="wshil_link">Book Now</a>
+                                        <a  href="" class="wshil_link">Book Now</a>
                                         <div class="clear-wishlist"><i class="fa-regular fa-trash-can"></i></div>
                                     </div>
                                 </div>
                                 <!--wish-list-item end-->
                             </div>
-                            <div class="wish-list-wrap-btns">
-                                <a href="#" class="wl_btn">Clear wishlist</a>
-                            </div>
+                            <
                         </div>
                         <!--wish-list-wrap-->
                     </div>
@@ -150,12 +148,12 @@
             <!--  header end  -->
             <!--  section  -->
             <div class="content-section parallax-section hero-section hidden-section" data-scrollax-parent="true">
-                <div class="bg par-elem " data-bg="{{ asset('assets') }}/images/bg/5.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+                <div class="bg par-elem " data-bg="{{ asset('storage/images') }}/{{$product->image}}" data-scrollax="properties: { translateY: '30%' }"></div>
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="section-title">
                         <h4>Enjoy your time in our Hotel with pleasure.</h4>
-                        <h2>Garden Family Room</h2>
+                        <h2>{{$product->name}}</h2>
                         <div class="section-separator"><span><i class="fa-thin fa-gem"></i></span></div>
                     </div>
                 </div>
@@ -191,34 +189,15 @@
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <!-- swiper-slide-->
+                                       @foreach($product->images as $item)
                                         <div class="swiper-slide hov_zoom">
-                                            <img src="{{ asset('assets') }}/images/room/1.jpg" alt="">
-                                            <a href="{{ asset('assets') }}/images/room/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                                            <img src="{{ asset('storage/images') }}/{{$item->image}}" alt="">
+                                            <a href="{{ asset('storage/images') }}/{{$item->image}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
                                         </div>
+                                       @endforeach
                                         <!-- swiper-slide end-->
                                         <!-- swiper-slide-->
-                                        <div class="swiper-slide  hov_zoom">
-                                            <img src="{{ asset('assets') }}/images/room/2.jpg" alt="">
-                                            <a href="{{ asset('assets') }}/images/room/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                                        </div>
-                                        <!-- swiper-slide end-->
-                                        <!-- swiper-slide-->
-                                        <div class="swiper-slide  hov_zoom">
-                                            <img src="{{ asset('assets') }}/images/room/3.jpg" alt="">
-                                            <a href="{{ asset('assets') }}/images/room/3.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                                        </div>
-                                        <!-- swiper-slide end-->
-                                        <!-- swiper-slide-->
-                                        <div class="swiper-slide  hov_zoom">
-                                            <img src="{{ asset('assets') }}/images/room/5.jpg" alt="">
-                                            <a href="{{ asset('assets') }}/images/room/5.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                                        </div>
-                                        <!-- swiper-slide end-->
-                                        <!-- swiper-slide-->
-                                        <div class="swiper-slide  hov_zoom">
-                                            <img src="{{ asset('assets') }}/images/room/4.jpg" alt="">
-                                            <a href="{{ asset('assets') }}/images/room/4.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                                        </div>
+                                        
                                         <!-- swiper-slide end-->
                                     </div>
                                 </div>
@@ -241,8 +220,8 @@
                                         <div class="text-block-title">
                                             <h4>About Accommodation</h4>
                                             <div class="sr-opt">
-                                                <div class="sa-price">$129/Night</div>
-                                                <div class="sa_towishlist">Add to Wishlist</div>
+                                                <div class="sa-price">$ {{number_format($product->Price)}}/Night</div>
+                                                <div class="sa_towishlist"><a href="">Add to Wishlist</a></div>
                                             </div>
                                         </div>
                                         <div class="room-card-details rcd-single">
@@ -254,9 +233,8 @@
                                             </ul>
                                         </div>
                                         <div class="text-block-container">
-                                            <p class="has-drop-cap">Qraesent eros turpis, commodo vel justo at, pulvinar mollis eros. Mauris aliquet eu quam id ornare. Morbi ac quam enim. Cras vitae nulla condimentum, semper dolor non, faucibus dolor. Vivamus adipiscing eros quis orci fringilla, sed pretium lectus viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nec velit non odio aliquam suscipit. Sed non neque faucibus, condimentum lectus at, accumsan enim.   </p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra. Interdum et malesu they adamale fames ac anteipsu pimsine faucibus curabitur arcu site feugiat in tortor in, volutpat sollicitudin libero. Hotel non lorem acer suscipit bibendum vulla facilisi nedeuter .</p>
-                                            <p>Fames massa tortor sit nisl sit. Duis nulla tempus quisque et diam condimentum nisl. Rhoncus quisque elementum nulla lorem at turpis vitae quisque. Vulputate duis vel et odio hendrerit magna. Nec lacus dui egestas sit. Vulputate tincidunt viverra viverra etiam porta facilisis. Diam dui euismod eget donec. Pharetra leo sed felis urna. At a viverra urna elementum tristique ac integer pretium. Vel tincidunt sed mi nulla lectus sagittis.</p>
+                                            <p class="has-drop-cap">{!!$product->description!!}</p>
+                                            
                                         </div>
                                         <div class="tbc-separator"></div>
                                         <div class="tbc_subtitle">Room Amenities  </div>
@@ -321,31 +299,35 @@
                                     <div class="fw-search-wrap">
                                         <div class="fw-search-wrap-title">Book  This Suite</div>
                                         <div class="section-separator"><span><i class="fa-thin fa-gem"></i></span></div>
-                                        <form  class="custom-form" action="https://diamant.kwst.net/" name="bookform">
-                                            <fieldset>
-                                                <div class="input-wrap">
-                                                    <label>Your Name:</label>
-                                                    <input type="text" placeholder="Your Name *" value="">
-                                                </div>
-                                                <div class="input-wrap">
-                                                    <label>Phone:</label>
-                                                    <input type="text" placeholder="Your Phone" value="">
-                                                </div>
-                                                <div class="date-container input-wrap">
-                                                    <label>Date:</label>
-                                                    <input type="text" id="res_date"     name="resdate"   value="">
-                                                </div>
-                                                <div class="quantity input-wrap ">
-                                                    <div class="quantity_title">Guests: </div>
-                                                    <div class="quantity-item">
-                                                        <input type="button" value="-" class="minus">
-                                                        <input type="text"    name="quantity"   title="Qty" class="qty color-bg" data-min="1" data-max="10" data-step="1" value="1">
-                                                        <input type="button" value="+" class="plus">
-                                                    </div>
-                                                </div>
-                                                <button class="searchform-submit bs_btn">Book Your Stay</button>
-                                            </fieldset>
-                                        </form>
+                                        @if (session('success'))
+                                        <div class="alert alert-success">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
+                                    
+                                    <form class="custom-form" action="{{ route('bookings.store') }}" method="post">
+                                        @csrf
+                                        <fieldset>
+                                            <div class="input-wrap">
+                                                <label>Your Name</label>
+                                                <input type="text" name="name" placeholder="Your Name *" value="">
+                                            </div>
+                                            <div class="input-wrap">
+                                                <label>Phone</label>
+                                                <input type="text" name="phone" placeholder="Your Phone" value="">
+                                            </div>
+                                            <div class="date-container input-wrap">
+                                                <label>Date</label>
+                                                <input type="text" id="res_date" name="res_date" placeholder="Date" value="">
+                                            </div>
+                                            <div class="quantity input-wrap">
+                                                <label>Guests</label>
+                                                <input type="number" name="quantity" placeholder="Guests" value="">
+                                            </div>
+                                            <button type="submit">Book Now</button>
+                                        </fieldset>
+                                    </form>
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -360,14 +342,15 @@
                             <!-- post-related -->  
                             <div class=" row">
                                 <!-- 1  --> 
+                                @foreach ($related as $item)
                                 <div class="item-related col-lg-4">
-                                    <a href="{{ Route('detail') }}" class="item-related_img">
-                                        <img src="{{ asset('assets') }}/images/room/3.jpg" class="respimg"   alt="">
+                                    <a href="{{Route('detail',$item->slug)}}" class="item-related_img">
+                                        <img src="{{ asset('storage/images') }}/{{$item->image}}" class="respimg"   alt="">
                                         <div class="overlay"></div>
                                         <span>View Details</span>
                                     </a>
-                                    <h3><a href="{{ Route('detail') }}">Premium Panorama Room</a></h3>
-                                    <span class="post-date post-price">$230/Night</span>
+                                    <h3><a href="{{Route('detail',$item->slug)}}">{{$item->name}}</a></h3>
+                                    <span class="post-date post-price">$ {{number_format($item->Price)}}/Night</span>
                                     <div class="room-card-details">
                                         <ul>
                                             <li><i class="fa-light fa-user"></i><span>1 Guest</span></li>
@@ -376,42 +359,10 @@
                                         </ul>
                                     </div>
                                 </div>
+                                @endforeach
                                 <!-- 1 end--> 
                                 <!-- 2  --> 
-                                <div class="item-related col-lg-4">
-                                    <a href="{{ Route('detail') }}" class="item-related_img">
-                                        <img src="{{ asset('assets') }}/images/room/4.jpg" class="respimg"   alt="">
-                                        <div class="overlay"></div>
-                                        <span>View Details</span>
-                                    </a>
-                                    <h3><a href="{{ Route('detail') }}">Beach Villa Room</a></h3>
-                                    <span class="post-date post-price">$321/Night</span>
-                                    <div class="room-card-details">
-                                        <ul>
-                                            <li><i class="fa-light fa-user"></i><span>1 Guest</span></li>
-                                            <li><i class="fa-light fa-bed-front"></i><span>1 Bed</span></li>
-                                            <li><i class="fa-light fa-bath"></i><span>1 Bath</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- 2 end-->  
-                                <!-- 3  --> 
-                                <div class="item-related col-lg-4">
-                                    <a href="{{ Route('detail') }}" class="item-related_img">
-                                        <img src="{{ asset('assets') }}/images/room/5.jpg" class="respimg"   alt="">
-                                        <div class="overlay"></div>
-                                        <span>View Details</span>
-                                    </a>
-                                    <h3><a href="{{ Route('detail') }}">Superior Panorama Room</a></h3>
-                                    <span class="post-date post-price">$143/Night</span>
-                                    <div class="room-card-details">
-                                        <ul>
-                                            <li><i class="fa-light fa-user"></i><span>1 Guest</span></li>
-                                            <li><i class="fa-light fa-bed-front"></i><span>1 Bed</span></li>
-                                            <li><i class="fa-light fa-bath"></i><span>1 Bath</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                              
                                 <!-- 3 end-->                                        
                             </div>
                         </div>
